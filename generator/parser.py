@@ -270,10 +270,13 @@ class Parser:
 					elif part.name == "dd":
 						# Check if the last header was params
 						if nextPart == "params":
+							first_child = next(iter(part.children), None)
 							# Check if there is a list of params
-							if part.find("ul"):
+							if isinstance(first_child, Tag) and first_child.name == "ul":
 								# Find all the params
-								paramElems = part.find_all("li", recursive=False)
+								part_ul = part.find("ul")
+								assert isinstance(part_ul, Tag)
+								paramElems = part_ul.find_all("li", recursive=False)
 								for paramElem in paramElems:
 									# Retrieve the information
 									paramName = paramElem.find("strong").get_text().strip()
@@ -285,7 +288,7 @@ class Parser:
 									methodType["params"][paramName] = paramType
 
 							# Check if there is a single param
-							elif part.find("p"):
+							elif isinstance(first_child, Tag) and first_child.name == "p":
 								# Retrieve information
 								paramName = part.find_all("strong", limit=1)[0].get_text().strip()
 								paramType = "Any"
