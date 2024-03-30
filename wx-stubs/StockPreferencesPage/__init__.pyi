@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from typing import Any, ContextManager, Optional, TypeAlias, Union
+from typing import Any, ContextManager, Optional, Union, TypeAlias
+
 
 Kind: TypeAlias = int  # Enumeration
 

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from typing import Any, ContextManager, Optional, TypeAlias, Union
+from typing import Any, ContextManager, Optional, Union, TypeAlias
+
 
 def NewCommandEvent() -> tuple[type['Event'], 'PyEventBinder']:
     """ Generates a new (command_event, binder) tuple.
