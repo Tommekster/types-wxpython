@@ -2535,3 +2535,75 @@ lObj = {
     "source": "https://docs.wxpython.org/wx.adv.CalendarCtrl.html",
 }
 EXTRA_KNOWN_ITEMS.append(lObj)
+lObj = {
+    "type": TypingType.ALIAS,
+    "name": "ExecuteEnv",
+    "moduleName": "wx",
+    "returnType": "Dict[str, str]",
+    "docstring": "An optional pointer to additional parameters for the child process, such as its initial working directory and environment variables. This parameter is available in wxWidgets 2.9.2 and later only.",
+    "source": "https://docs.wxpython.org/wx.functions.html",
+}
+EXTRA_KNOWN_ITEMS.append(lObj)
+lObj = {
+    "type": TypingType.ALIAS,
+    "name": "Reason",
+    "moduleName": "wx",
+    "returnType": "'wx.ActivateEvent.Reason'",
+    "docstring": "",
+    "source": "https://docs.wxpython.org/wx.ActivateEvent.html",
+}
+EXTRA_KNOWN_ITEMS.append(lObj)
+lObj = {
+    "type": TypingType.ALIAS,
+    "name": "Country",
+    "moduleName": "wx",
+    "returnType": "'wx.DateTime.Country'",
+    "docstring": "",
+    "source": "https://docs.wxpython.org/wx.DateTime.html",
+}
+EXTRA_KNOWN_ITEMS.append(lObj)
+aObj = {
+    "type": TypingType.ALIAS,
+    "name": "NameFlags",
+    "moduleName": "wx",
+    "returnType": "int",
+    "docstring": "",
+    "source": "https://docs.wxpython.org/wx.DateTime.NameFlags.enumeration.html",
+}
+EXTRA_KNOWN_ITEMS.append(aObj)
+aObj = {
+    "type": TypingType.ALIAS,
+    "name": "WeekFlags",
+    "moduleName": "wx",
+    "returnType": "int",
+    "docstring": "",
+    "source": "https://docs.wxpython.org/wx.DateTime.WeekFlags.enumeration.html",
+}
+EXTRA_KNOWN_ITEMS.append(aObj)
+aObj = {
+    "type": TypingType.ALIAS,
+    "name": "SeekMode",
+    "moduleName": "wx",
+    "returnType": "int",
+    "docstring": "",
+    "source": "https://docs.wxpython.org/wx.SeekMode.enumeration.html",
+}
+EXTRA_KNOWN_ITEMS.append(aObj)
+aObj = {
+    "type": TypingType.ALIAS,
+    "name": "ResourceCat",
+    "moduleName": "wx",
+    "returnType": "int",
+    "docstring": "",
+    "source": "https://docs.wxpython.org/wx.StandardPaths.ResourceCat.enumeration.html",
+}
+EXTRA_KNOWN_ITEMS.append(aObj)
+aObj = {
+    "type": TypingType.ALIAS,
+    "name": "ImageArray",
+    "moduleName": "wx",
+    "returnType": "List['Image']",
+    "docstring": "The image array object which is to be affected by this operation.",
+    "source": "https://docs.wxpython.org/wx.GIFHandler.html",
+}
+EXTRA_KNOWN_ITEMS.append(aObj)
