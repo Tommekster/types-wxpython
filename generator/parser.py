@@ -279,12 +279,9 @@ class Parser:
 								paramElems = part_ul.find_all("li", recursive=False)
 								for paramElem in paramElems:
 									# Retrieve the information
-									paramName = paramElem.find("strong").get_text().strip()
-									paramType = "Any"
-									if paramElem.find("em"):
-										paramType = self._ensureTyping(paramElem.find("em").get_text().strip())
-									elif paramElem.find("span"):
-										paramType = self._ensureTyping(paramElem.find("span").get_text().strip())
+									paramName, paramType = re.findall(r"^\s*(?P<name>\w+)\s+\((?P<type>[^\)]+)\)|$", paramElem.text)[0]
+									paramName = paramName or paramElem.find("strong").get_text().strip()
+									paramType = self._ensureTyping(paramType or "Any")
 									methodType["params"][paramName] = paramType
 
 							# Check if there is a single param
